@@ -18,7 +18,7 @@
 
   <script>
     // U 
-    const canal = 'https://www.tricotv89.futbolandres.xyz/p/espn-3-mx.html';
+    const canal = 'aHR0cHM6Ly93d3cudHJpY290djg5LmZ1dGJvbGFuZHJlcy54eXovcC9lc3BuLTMtbXguaHRtbA==';
     document.getElementById("player").src = atob(canal);
   </script>
 </body>
