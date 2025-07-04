@@ -5,6 +5,29 @@
   <title>Bienvendio</title>
 </head>
 <body>
+  <script>
+  // Bloquear clic derecho
+  document.addEventListener('contextmenu', event => event.preventDefault());
+
+  // Bloquear Ctrl+U (ver código fuente)
+  document.addEventListener('keydown', function(e) {
+    if (e.ctrlKey && e.key.toLowerCase() === 'u') {
+      e.preventDefault();
+      alert('Esta acción está bloqueada.');
+    }
+    // Bloquear F12 (herramientas de desarrollador)
+    if (e.key === 'F12') {
+      e.preventDefault();
+      alert('Esta acción está bloqueada.');
+    }
+    // Bloquear Ctrl+Shift+I (abrir DevTools)
+    if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === 'i') {
+      e.preventDefault();
+      alert('Esta acción está bloqueada.');
+    }
+  });
+</script>
+
   <h1></h1>
   <p></p>
 </body>
