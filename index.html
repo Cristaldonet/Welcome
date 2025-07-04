@@ -2,34 +2,32 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <title>Bienvendio</title>
+  <title>Bienvenido</title>
 </head>
 <body>
   
 
   <h1></h1>
   <p></p>
-  <script>
-  // Bloquear clic derecho
-  document.addEventListener('contextmenu', event => event.preventDefault());
+ <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    document.addEventListener('contextmenu', event => event.preventDefault());
 
-  // Bloquear Ctrl+U (ver código fuente)
-  document.addEventListener('keydown', function(e) {
-    if (e.ctrlKey && e.key.toLowerCase() === 'u') {
-      e.preventDefault();
-      alert('Esta acción está bloqueada.');
-    }
-    // Bloquear F12 (herramientas de desarrollador)
-    if (e.key === 'F12') {
-      e.preventDefault();
-      alert('Esta acción está bloqueada.');
-    }
-    // Bloquear Ctrl+Shift+I (abrir DevTools)
-    if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === 'i') {
-      e.preventDefault();
-      alert('Esta acción está bloqueada.');
-    }
+    document.addEventListener('keydown', function(e) {
+      const key = e.key.toLowerCase();
+
+      // Bloquear combinaciones comunes
+      if (
+        (e.ctrlKey && ['u', 's', 'c'].includes(key)) || // Ctrl+U / S / C
+        (e.ctrlKey && e.shiftKey && ['i', 'j'].includes(key)) || // Ctrl+Shift+I / J
+        key === 'f12'
+      ) {
+        e.preventDefault();
+        alert('.......');
+      }
+    });
   });
 </script>
+
 </body>
 </html>
