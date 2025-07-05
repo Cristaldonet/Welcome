@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Canal 1</title>
+  <style>
+    html, body, iframe {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <iframe id="player" src="" allowfullscreen loading="lazy"></iframe>
+
+  <script>
+    //  
+    const canal = 'aHR0cHM6Ly93d3cudHJpY290djg5LmZ1dGJvbGFuZHJlcy54eXovMjAyNS8wMS9ici0xLmh0bWw=';
+    document.getElementById("player").src = atob(canal);
+  </script>
+</body>
+</html>
