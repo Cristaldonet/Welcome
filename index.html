@@ -1,35 +1,30 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta http-equiv="refresh" content="0; url=http://www.rojadirecta.eu/">
-
   <meta charset="UTF-8" />
+  <meta http-equiv="refresh" content="0; url=http://www.rojadirecta.eu/" />
   <title>Bienvenido</title>
 </head>
 <body>
-  
-
   <h1></h1>
   <p></p>
- <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    document.addEventListener('contextmenu', event => event.preventDefault());
 
-    document.addEventListener('keydown', function(e) {
-      const key = e.key.toLowerCase();
-
-      // Bloquear combinaciones comunes
-      if (
-        (e.ctrlKey && ['u', 's', 'c'].includes(key)) || // Ctrl+U / S / C
-        (e.ctrlKey && e.shiftKey && ['i', 'j'].includes(key)) || // Ctrl+Shift+I / J
-        key === 'f12'
-      ) {
-        e.preventDefault();
-        alert('.......');
-      }
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      document.addEventListener('contextmenu', event => event.preventDefault());
+      document.addEventListener('keydown', function(e) {
+        const key = e.key.toLowerCase();
+        if (
+          (e.ctrlKey && ['u', 's', 'c'].includes(key)) ||
+          (e.ctrlKey && e.shiftKey && ['i', 'j'].includes(key)) ||
+          key === 'f12'
+        ) {
+          e.preventDefault();
+          alert('.......');
+        }
+      });
     });
-  });
-</script>
-
+  </script>
 </body>
 </html>
+
