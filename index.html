@@ -2,22 +2,29 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <title>Bienvenido</title>
+  <title>Redirigiendo...</title>
+  <script>
+    // Redirigir desde futbolandres.eu hacia futbolandres.com
+    document.addEventListener('DOMContentLoaded', () => {
+      if (window.location.hostname === "www.futbolandres.eu" || window.location.hostname === "futbolandres.eu") {
+        window.location.href = "https://www.futbolandres.com";
+      }
+    });
+  </script>
 </head>
 <body>
-  <h1></h1>
-  <p></p>
+  <h1>Redirigiendo a futbolandres.com...</h1>
+  <p>Por favor espera un momento.</p>
+
   <script>
+    // Protección contra clic derecho y combinaciones de teclado
     document.addEventListener('DOMContentLoaded', () => {
       document.addEventListener('contextmenu', event => event.preventDefault());
-
       document.addEventListener('keydown', function(e) {
         const key = e.key.toLowerCase();
-
-        // Bloquear combinaciones comunes
         if (
-          (e.ctrlKey && ['u', 's', 'c'].includes(key)) || // Ctrl+U / S / C
-          (e.ctrlKey && e.shiftKey && ['i', 'j'].includes(key)) || // Ctrl+Shift+I / J
+          (e.ctrlKey && ['u', 's', 'c'].includes(key)) ||
+          (e.ctrlKey && e.shiftKey && ['i', 'j'].includes(key)) ||
           key === 'f12'
         ) {
           e.preventDefault();
@@ -28,3 +35,4 @@
   </script>
 </body>
 </html>
+
