@@ -3,7 +3,7 @@
 <head>
 
 
-  <meta charset="UTF-8">
+    <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FutbolAndres - Inicio</title>
   <meta name="description" content="Mira partidos de fútbol en vivo y consulta la agenda deportiva en FutbolAndres.">
@@ -14,19 +14,24 @@
       padding: 0;
       height: 100%;
       display: flex;
-      justify-content: center; /* centra horizontalmente */
-      align-items: center;     /* centra verticalmente */
-      background-color: #111;  /* opcional, fondo oscuro */
+      justify-content: center;  /* centra horizontal */
+      align-items: center;      /* centra vertical */
+      background-color: #111;   /* fondo oscuro */
     }
-    iframe {
-      width: 780px;   /* ancho fijo */
-      height: 450px;  /* alto fijo */
-      border: 2px solid #444; /* borde opcional para destacar */
-      border-radius: 10px;     /* bordes redondeados */
-      overflow: auto;          /* scroll si hace falta */
+    .iframe-container {
+      width: 90%;           /* ocupa hasta el 90% del ancho disponible */
+      max-width: 780px;     /* no se pasa de 780px */
+      aspect-ratio: 16 / 9; /* mantiene proporción similar a 780x450 */
+      border: 2px solid #444;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .iframe-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
     }
   </style>
-
   <body>
   <iframe src="https://futbolandres.eu/agenda.html" scrolling="yes"></iframe>
 </body>
