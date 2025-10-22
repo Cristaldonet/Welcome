@@ -1,46 +1,82 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-   <meta charset="UTF-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FutbolAndres</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #0b1a35; /* Azul oscuro */
+      font-family: Arial, Helvetica, sans-serif;
+      color: #fff;
+      text-align: center;
+    }
 
-  <!-- Título visible en Google -->
-  <title>Ver partidos de fútbol en vivo online - FutbolAndres</title>
+    h1 {
+      margin-top: 40px;
+      font-size: 48px;
+      letter-spacing: 2px;
+    }
 
-  <!-- Descripción para buscadores -->
-  <meta name="description" content="Mira partidos de fútbol en vivo, streaming online gratis y resultados en FutbolAndres y Rojadirecta.">
+    .logo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: 50px auto;
+      justify-items: center;
+    }
 
-  <!-- Palabras clave (keywords) -->
-  <meta name="keywords" content="fútbol en vivo, streaming fútbol, partidos online, fútbol gratis, ver fútbol, Rojadirecta, rojadirecta eu, rojadirecta me, pirlotv, pirlo, pelotalibre, futbol libre, futbol gratis">
-  <meta charset="UTF-8" />
+    .logo-grid a {
+      display: block;
+      background-color: #13294b;
+      border-radius: 10px;
+      padding: 15px;
+      transition: transform 0.2s, background-color 0.2s;
+    }
 
-   
+    .logo-grid a:hover {
+      transform: scale(1.05);
+      background-color: #1e3a75;
+    }
 
- 
+    .logo-grid img {
+      width: 100px;
+      height: 100px;
+      object-fit: contain;
+    }
 
+    footer {
+      margin-top: 50px;
+      color: #ccc;
+      font-size: 14px;
+      padding-bottom: 20px;
+    }
+  </style>
+</head>
 <body>
- 
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      document.addEventListener('contextmenu', event => event.preventDefault());
+  <h1>FutbolAndres</h1>
 
-      document.addEventListener('keydown', function(e) {
-        const key = e.key.toLowerCase();
+  <div class="logo-grid">
+    <!-- Fila 1 -->
+    <a href="#" target="_blank"><img src="logo1.png" alt="Logo 1"></a>
+    <a href="#" target="_blank"><img src="logo2.png" alt="Logo 2"></a>
+    <a href="#" target="_blank"><img src="logo3.png" alt="Logo 3"></a>
+    <a href="#" target="_blank"><img src="logo4.png" alt="Logo 4"></a>
+    <a href="#" target="_blank"><img src="logo5.png" alt="Logo 5"></a>
+    <a href="#" target="_blank"><img src="logo6.png" alt="Logo 6"></a>
 
-        // Bloquear combinaciones comunes
-        if (
-          (e.ctrlKey && ['u', 's', 'c'].includes(key)) || // Ctrl+U / S / C
-          (e.ctrlKey && e.shiftKey && ['i', 'j'].includes(key)) || // Ctrl+Shift+I / J
-          key === 'f12'
-        ) {
-          e.preventDefault();
-          alert('.......');
-        }
-      });
-    });
-  </script>
+    <!-- Fila 2 -->
+    <a href="#" target="_blank"><img src="logo7.png" alt="Logo 7"></a>
+    <a href="#" target="_blank"><img src="logo8.png" alt="Logo 8"></a>
+    <a href="#" target="_blank"><img src="logo9.png" alt="Logo 9"></a>
+    <a href="#" target="_blank"><img src="logo10.png" alt="Logo 10"></a>
+    <a href="#" target="_blank"><img src="logo11.png" alt="Logo 11"></a>
+    <a href="#" target="_blank"><img src="logo12.png" alt="Logo 12"></a>
+  </div>
+
+  <footer>© 2025 FutbolAndres - Todos los derechos reservados</footer>
 </body>
-   </head>
 </html>
-
-
